@@ -1,0 +1,128 @@
+@use '../variables'
+@use '../mixins'
+
+#background
+    display: flex
+    justify-content: space-between
+    flex-direction: column
+    background-color: red
+    width: 100vw
+    min-height: 100vh
+    margin: 0 auto
+    position: relative
+    overflow-x: hidden
+    gap: 2rem
+    z-index: 0
+
+    #top-side
+        max-height: 20vh
+        position: relative
+        @include mixins.center
+        min-width: 100%
+
+        #btnSupport, #imgSupport
+            margin: 15px 0 0 15px
+            background: none
+            border: none
+            // padding: 15px
+            width: 50px
+            position: absolute
+            left: 0
+            top: -15px
+            cursor: pointer
+            pointer-events: auto
+
+        #imgTopSide
+            width: 100vw
+
+        #imgTopSide button
+            position: absolute
+            background-color: #2222
+            padding: 1rem
+
+        #logoAmenicanews
+            position: absolute
+            // background-color: #2222
+
+            @include mixins.center
+            img
+                width: 35vw
+                position: relative
+    #down-side
+        display: flex
+        justify-content: center
+        align-items: center
+        // background-color: #2222
+        height: 70vh
+
+        #formLogin
+            background-color: #FFFFFF
+            width: 458px
+            height: 258px
+            fill: #fff
+            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25)
+            .form
+                display: flex
+                gap: 60px
+                flex-direction: column
+                padding: 45px 51px 69px 29px
+            input
+                border: none
+                border-bottom: 2px solid rgba(0, 0, 0, 0.3)
+                width: 369px
+                height: 30px
+                font-family: variables.$font-stack
+                font-weight: 500
+                font-size: 24px
+                color: rgba(0, 0, 0, 0.7)
+            input::placeholder
+                color: rgba(0, 0, 0, 0.3)
+            input:focus
+                outline: none
+            #input-box2
+                a
+                    font-family: variables.$font-stack
+                    font-weight: 400
+                    font-size: 12px
+                    color: #4642ff
+                    text-decoration: none
+                    margin-top: 12px
+                    display: flex
+                    justify-content: flex-end
+                    cursor: pointer
+                    &:hover
+                        text-decoration: underline
+            #buttons
+                display: flex
+                justify-content: space-between
+                margin-top: 15px
+                width: 458px
+                margin-left: -30px
+            #btnLogin
+                align-content: center
+                text-decoration: none
+                border: none
+                width: 100%
+                cursor: pointer
+                height: 50px
+                background-color: #fff
+                box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25)
+                font-family: variables.$font-stack
+                font-weight: 700
+                font-size: 20px
+                text-align: center
+                color: #f80032
+                
+                &:hover
+                    background-color: #000000
+                    
+            #btnAccount
+                border: none
+                background: none
+                font-family: variables.$font-stack
+                font-weight: 700
+                font-size: 20px
+                text-align: center
+                color: #fff
+                padding: 13px 40px
+            

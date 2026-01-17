@@ -1,0 +1,247 @@
+@use '../mixins'
+@use '../variables'
+
+.side
+  font-family: Arial, sans-serif
+  margin: 0
+  padding: 0
+  justify-content: center
+  align-items: flex-start
+  height: 100vh
+  background-color: #f4f4f4
+
+.main-container
+  display: flex
+  width: 96%
+  margin: 20px
+  flex-direction: column
+  align-items: center // Centraliza os itens horizontalmente
+  text-align: center // Centraliza o texto dentro dos itens
+
+.images-container
+  background-color: #d9d9d9
+  padding: 20px
+  margin: 10px
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+  border-radius: 20px
+  width: 30%
+  position: relative
+  display: flex
+  flex-direction: column
+  gap: 10px
+
+.images-container img
+  min-width: 260px
+
+.news-container
+  width: 70%
+  margin-right: 5%
+
+.title
+  font-size: 2em
+  margin: 15px
+  display: flex
+  justify-content: center
+  align-items: center
+  text-align: center // Centraliza o texto do título
+
+.divider
+  border-top: 3px solid #ddd
+  width: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+
+.subtitle
+  font-size: 1.5em
+  color: #555
+  margin: 30px
+  display: flex
+  justify-content: center
+  align-items: center
+  text-align: center // Centraliza o texto do subtítulo
+
+.image
+  max-width: 100%
+  height: auto
+  margin: 55px
+  display: block
+  margin-left: auto
+  margin-right: auto // Centraliza a imagem horizontalmente
+
+.content
+  font-size: 1.5em
+  line-height: 1.6
+  color: #333
+  text-align: center // Centraliza o texto do conteúdo
+
+.overlay-image
+  position: relative
+  text-align: center
+  color: white
+  border-radius: 15%
+  border-bottom-left-radius: 20%
+  border-bottom-right-radius: 20%
+  overflow: hidden
+
+.overlay-text
+  position: absolute
+  bottom: 14px
+  background: rgba(255, 255, 255, 0.7)
+  color: #333
+  width: 90%
+  left: 50%
+  transform: translateX(-50%)
+  text-align: center
+  padding: 5px 0
+  white-space: nowrap
+  overflow: hidden
+  border-top-left-radius: 10px
+  border-top-right-radius: 10px
+  text-overflow: ellipsis
+
+.container-bottom
+  display: flex
+
+.box
+  flex: 1
+  padding: 20px
+  width: 16.25%
+  box-sizing: border-box
+  background-color: #ccc
+  border-radius: 15px
+  margin: 10px
+  display: flex
+  flex-direction: column
+  align-items: center
+  overflow: hidden
+
+.box img
+  max-width: 90%
+  height: auto
+  display: block
+  border-radius: 10%
+
+.textNoticia
+  text-overflow: ellipsis
+  white-space: nowrap
+  overflow: hidden
+  display: block
+  width: 100%
+  margin-top: 10px
+  padding: 0 5px
+
+.container-button
+  display: flex
+  justify-content: center
+  margin-top: 35px
+
+.buttonReprovs button
+  margin: 0
+  border: none
+  font-size: medium
+  height: 35px
+
+.buttonReprovs
+  display: flex
+  gap: 0
+  margin-right: 25px
+
+.buttonAprovs button
+  margin: 0
+  border: none
+  font-size: medium
+  height: 35px
+
+.buttonAprovs
+  display: flex
+  gap: 0
+  margin-right: 25px
+
+.comentario_title
+  padding: 1%
+
+// ------------------------------------------------ Área dos Comentários
+#comentarioScroll
+  display: flex
+
+#comentarios
+  width: 50vw
+  margin-left: 3%
+  margin-top: 2%
+
+.imageUserComentario
+  width: 10vh
+  height: 10vh
+  border-radius: 50px
+
+.corpoComentario
+  width: -webkit-fill-available
+  display: flex
+  flex-direction: column
+  flex-wrap: nowrap
+  align-content: space-around
+  align-items: stretch
+
+.comentarioItem
+  display: flex
+  background-color: #D9D9D9
+  margin-bottom: 4vh
+  padding: 3vh
+  border-radius: 20px
+  position: relative
+  // max-width: 60rem
+  min-height: 150px
+
+.dataDoComentario
+  font-family: variables.$font-stack
+  font-size: 16px
+  position: absolute
+  right: -1rem
+  bottom: 10px
+  border: none
+  background: none
+
+.textoComentario
+  padding: 1rem 0 0 0
+  display: -webkit-box
+  -webkit-line-clamp: 3
+  -webkit-box-orient: vertical
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: normal
+  margin-left: 25px
+  font-weight: bold // Coloca o texto em negrito
+  max-height: 5em
+
+.usuarioIdentificacao
+  margin-left: 25px
+
+// ----------------- Área para escrever novo comentário
+.comentarioCampo
+  width: 40vw
+  margin-left: 5%
+  margin-top: 4.5%
+  background-color: #D9D9D9
+  padding: 3vh
+  border-radius: 20px
+  position: relative
+  min-height: 150px
+
+.textoComentarioEscrito
+  width: 100% // Define a largura do textarea como 90% do contêiner pai
+  height: 300px // Define uma altura maior para o textarea
+  border: none
+  resize: none // Impede que o textarea seja redimensionado pelo usuário
+  padding: 10px
+  box-sizing: border-box
+  font-size: 1em
+  line-height: 1.5em
+  border-radius: 10px
+
+.enviarComentario
+  margin-top: 3%
+  width: 100%
+  padding: 2%
+  border-radius: 10px
+  border: none

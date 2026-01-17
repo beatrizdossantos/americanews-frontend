@@ -1,0 +1,125 @@
+@use '../mixins'
+@use '../variables'
+
+a
+    font-family: variables.$font-stack
+    text-decoration: none 
+
+
+
+#homeNoticia
+    font-family: variables.$font-stack
+    visibility: visible
+    display: flex
+    justify-content: flex-start
+    flex-wrap: wrap
+    padding: 25px
+    width: 100%
+    gap: 2rem
+
+#noticiaScrollLeft
+    padding: 25px
+    // background-color: #D9D9D9
+    background-color: #e5e5e5
+    display: flex
+    border-radius: 20px
+    gap: 2rem
+    flex-direction: column
+    flex-wrap: nowrap
+    justify-content: space-around
+    align-items: center
+    height: fit-content
+    max-width: fit-content
+
+.noticiaItemLeft
+    position: relative
+    border: none
+    pandding: none
+    cursor: pointer
+
+.imageScrollLeft
+    width: 72vh
+    height: 40vh
+    border-radius: 20px
+
+.textoSobrepostoLeft
+    position: absolute
+    bottom: 5px // Ajuste conforme necessário
+    left: 50%
+    transform: translateX(-50%) // Centraliza horizontalmente
+    background-color: rgba(255, 255, 255, 0.8)
+    padding: 10px
+    width: 65vh
+    border-top-left-radius: 20px
+    border-top-right-radius: 20px
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+    font-weight: bold
+    color: #000000
+    text-decoration: none
+
+
+
+
+
+
+#noticiaScrollRight
+    width: 55%
+    border: none
+    padding: none
+    background-color: #ffffff
+    color: #000000
+    text-decoration: none
+    height: 150px
+
+.imageScrollRight
+    width: 14vh
+    height:14vh
+    border-radius: 20px
+
+.corpoNoticia
+    width: -webkit-fill-available
+    display: flex
+    flex-direction: column
+    flex-wrap: nowrap
+    align-content: space-around
+    align-items: stretch
+
+
+.noticiaItemRight
+    display: flex
+    background-color: #D9D9D9
+    margin-bottom: 4vh
+    padding: 3vh
+    border-radius: 20px
+    position: relative
+    // max-width: 60rem
+    min-height: 150px
+    .dataDaNoticia
+        // display: flex
+        font-family: variables.$font-stack
+        font-size: 16px
+        position: absolute
+        right: -1rem
+        bottom: 10px
+        border: none
+        background: none
+
+p.textoSobrepostRight
+    color: #0000009c
+    padding: 1rem 0 0 0
+    display: -webkit-box
+    -webkit-line-clamp: 3
+    -webkit-box-orient: vertical
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: normal
+    margin-left: 25px
+    font-weight: bold // Coloca o texto em negrito
+    max-height: calc(1em * 1.2 * 3)
+
+h3.titleNoticiaRight
+    font-family: variables.$font-stack
+    color: #000000
+    margin-left: 25px

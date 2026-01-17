@@ -1,0 +1,32 @@
+@use '../variables'
+@use '../mixins'
+
+#categories
+    visibility: hidden
+    z-index: 1
+    width: 231px
+    height: 205px
+    box-shadow: 0 4px 21px 0 rgba(0, 0, 0, 0.5)
+    background: #fff
+    border-radius: 15px
+    position: absolute
+    right: 40vw
+    top: 46px
+
+    ul
+        padding-left: 26px
+        list-style-type: none
+
+    li
+        cursor: pointer
+        font-family: variables.$font-stack
+        text-align: left
+        font-weight: 700
+        font-size: 20px
+        color: rgba(0, 0, 0, 0.55)
+        border-bottom: 2.5px solid rgba(0, 0, 0, 0.3)
+        width: 124px
+        padding: 12px 140px 11px 3px
+        
+        &:hover
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)

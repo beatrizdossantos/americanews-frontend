@@ -1,0 +1,138 @@
+@use '../variables'
+@use '../mixins'
+
+#navbar
+    display: flex
+    justify-content: space-between //adicionamos de volta essa bomba
+    background-color: #1b1b11
+    height: 4rem
+
+ul li a
+    font-family: variables.$font-stack
+    text-decoration: none
+    color: white
+    padding: 2px 0px
+    text-align: center
+    font-weight: 600
+    align-content: center
+    display: block
+
+ul li ul.dropdown:before
+    right: 33px
+    top: -8px
+    position: absolute
+    content: ''
+    height: 15px
+    width: 15px
+    background: #1b1b11
+    transform: rotate(45deg)
+    z-index: -1
+
+ul li ul.dropdown li
+    display: block
+    height: 1.5rem
+    position: relative
+    bottom: 0
+    margin-top: 3.5px
+    &:hover
+        background-color: #ffffff40
+        
+
+ul li ul.dropdown
+    list-style: none
+    right: 27px
+    border-radius: 2px
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25)
+    margin-top: 15px
+    border-bottom: red solid 2.5px
+    width: 5.1rem
+    height: 4rem
+    background: #1b1b11
+    position: absolute
+    z-index: 999
+    display: none
+
+ul li:hover ul.dropdown
+    display: block
+
+
+#btnBack
+    cursor: pointer
+
+#logoNavbar
+    height: 4rem
+    margin-left: 4.219rem
+
+#centerNavbar
+    display: flex
+    // flex-direction: line
+    // justify-content: flex
+    align-items: center
+    position: relative
+
+#inputSearch
+    padding-left: 3px
+    height: 2.5rem
+    border-top-right-radius: 50px
+    border-bottom-right-radius: 50px
+    border: 0
+    width: 20vw
+    font-family: variables.$font-stack
+    font-weight: 500
+    font-size: 18px
+    color: rgba(0, 0, 0, 0.7)
+
+#inputSearch:focus
+    outline: none
+
+#btnCategories
+    visibility: hidden
+    background: none
+    border: none
+    position: absolute
+    left: 85%
+    top: 40%
+    cursor: pointer
+
+#rightNavbar
+    @include mixins.center
+    gap: 2rem
+    width: 25rem
+    min-width: fit-content
+
+.iconeNavbar
+    padding-right: 2vh
+
+
+
+.BottonNavbar
+    background-color: transparent
+    padding-left: 1vh
+    // padding-right: 1vh
+    border: 0
+    width: 10%
+    cursor: pointer
+
+
+#BottonSearchNavbar
+    width: 2.3rem
+    background-color: #f80132
+    border: 5px solid #f80132
+    border-top-left-radius: 50px
+    border-bottom-left-radius: 50px
+    height: 2.5rem
+    cursor: pointer
+    img
+        width: 20px
+
+
+
+
+
+
+
+
+
+
+
+

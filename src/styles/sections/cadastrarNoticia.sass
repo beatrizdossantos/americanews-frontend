@@ -1,0 +1,159 @@
+@use '../variables'
+
+#formulario
+    font-family: variables.$font-stack
+    overflow-y: hidden
+    overflow-x: hidden
+
+
+// .formulario
+//     font-family: Arial, sans-serif
+//     background-color: #f0f0f0
+//     display: flex
+//     justify-content: center
+//     align-items: center
+//     height: 85vh
+//     margin: 0
+
+.form-container
+    display: flex
+    flex-direction: column
+    flex-wrap: nowrap
+    justify-content: space-around
+    background-color: #d3d3d3
+    width: 96%
+    height: 83vh
+    padding: 20px
+    margin: 30px
+    border-radius: 8px
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+
+.form-label
+    display: flex
+    flex-direction: column
+
+.input-group
+    display: flex
+    justify-content: space-between
+    margin-bottom: 10px
+    margin-right: 20px
+
+.input-left,
+.input-right
+    margin-top: 1.5rem
+    flex: 1
+    align-items: center
+
+.input-left
+    margin: 0px 30px 0px 0px
+
+.input-title,
+.input-subtitle,
+.input-category-field
+    height: 3rem
+    width: 98%
+    padding: 10px
+    border: 1px solid #ccc
+    border-radius: 15px
+    font-size: 16px
+    margin-top: 3px
+    margin-bottom: 15px
+
+.input-image
+    display: none
+
+.textarea
+    height: 13rem
+    width: 99%
+    margin-top: 5px
+    border: 1px solid #ccc
+    border-radius: 15px
+    resize: none
+    padding: 10px
+
+.custom-file-upload
+    width: 100%
+    padding: 10px
+    border: 1px solid #ccc
+    border-radius: 15px
+    font-size: 16px
+    text-align: center
+    cursor: pointer
+    background-color: #fff
+    position: relative
+    height: 215px
+    display: flex
+    justify-content: center
+    align-items: center
+
+    img
+        max-height: 100%
+        max-width: 100%
+        border-radius: 4px
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        margin: auto
+        display: block
+
+    &[data-has-image="true"] img
+        display: none
+
+.custom-file-upload img
+    max-height: 100%
+    max-width: 100%
+    color: transparent
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    margin: auto
+    border-radius: 4px
+
+
+
+.label-text
+    font-family: variables.$font-stack
+
+.conteudo
+    width: 98%
+    padding: 10px
+    border: 1px solid #ccc
+    border-radius: 15px
+    font-size: 16px
+    margin-top: 3px
+    margin-bottom: 15px
+    height: 227px
+    resize: vertical
+
+.button-container
+    display: flex
+    justify-content: center
+    width: 100%
+    margin-top: 1.5rem
+
+.submit-button
+    padding: 10px 20px
+    font-size: 20px
+    border: none
+    border-top-left-radius: 25px
+    border-bottom-left-radius: 25px
+    background-color: #000000
+    color: white
+    cursor: pointer
+
+.submit-button-right
+    padding: 10px 20px
+    font-size: 20px
+    border: none
+    border-top-right-radius: 25px
+    border-bottom-right-radius: 25px
+    background-color: #4CAF50
+    color: white
+    cursor: pointer
+
+
+

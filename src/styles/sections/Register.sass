@@ -1,0 +1,56 @@
+@use '../variables'
+@use '../mixins'
+
+
+.inner-container
+    background-color: #e6e6e6 /* Cinza claro */
+    padding: 50px
+    border-radius: 8px
+    width: 70% /* Ajuste conforme necessário */
+    position: absolute
+    top: 55%
+    left: 50%
+    transform: translate(-50%, -50%)
+    box-sizing: border-box
+    height: 43vw
+
+.label-text
+    display: block
+    margin-bottom: 5px
+    font-weight: bold
+
+.label-text-gray
+    color: gray
+    margin-left: 25%
+
+.input-field
+    padding: 8px
+    margin-left: 25%
+    margin-bottom: 15px
+    border: 1px solid #ccc
+    border-radius: 4px
+    box-sizing: border-box
+
+#nome-completo, #telefone, #email, #email-corporativo, #endereco,#senha, #confirmar-senha
+    width: 50%
+    min-width: 300px
+
+
+
+.button
+    width: 100% /* Ocupa toda a largura disponível */
+    max-width: 200px /* Define um máximo de largura */
+    padding: 10px
+    background-color: #ee0c0c
+    color: white
+    border: none
+    margin-left: 39%
+    margin-top: 2%
+    border-radius: 4px
+    cursor: pointer
+    font-size: 16px
+    /*display: block  Garante que o botão ocupe toda a largura */
+    @include mixins.center
+
+    &:hover
+        background-color: #000000

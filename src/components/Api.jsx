@@ -1,0 +1,1 @@
+export let apiAdress = "https://localhost:7174/api";
